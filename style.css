@@ -1,11 +1,130 @@
 body {
-  font-family: monospace, sans-serif;
+  font-family: roboto, monospace, sans-serif;
 }
 
-ul {
+.bg-header {
+  background-color: rgb(43, 43, 43);
+}
+.container-all {
+  display: grid;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 10px 20px;
+}
+.container-nav {
   display: flex;
-  list-style: none;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.ul-nav {
+  display: flex;
+  gap: 24px;
+}
+.ul-nav li {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 4px 0px;
+  cursor: pointer;
+  color: white;
+  border-bottom: 2px solid rgba(75, 68, 68, 0);
+}
+.ul-nav li::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: rgb(255, 255, 255);
+  margin-top: 2px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.ul-nav li:hover::after {
+  width: 100%;
+}
+
+.erros-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+.span-erros {
+  color: rgb(251, 25, 25);
+  font-weight: 700;
+}
+
+.jogo-forca {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box02 {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  justify-items: center;
+}
+.lista-palavra {
+  display: flex;
+  gap: 18px;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
+}
+.form-forca {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.form-digite {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.form-text {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  max-width: 150px;
+}
+.form-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(43, 43, 43);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.perdeu {
+  position: absolute;
+  color: white;
+  right: 330px;
+  padding: 60px 100px;
+  background-color: rgba(255, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.505);
+}
+.ganhou {
+  position: absolute;
+  color: white;
+  right: 330px;
+  padding: 60px 100px;
+  background-color: rgba(3, 188, 46, 0.7);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.505);
+}
+.jaFoi {
+  position: absolute;
+  color: black;
+  font-weight: 500;
+  font-size: 0.95rem;
+  bottom: -30px;
+  right: 122px;
 }
