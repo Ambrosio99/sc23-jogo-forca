@@ -85,7 +85,8 @@ function trocarImg() {
   allimg.forEach((img) => {
     const src = img.src;
     const partSrc = src.split("/");
-    if (!partSrc[4].includes(letrasErradas.length)) {
+    const srcimg = partSrc.find((item) => item.startsWith("img-"));
+    if (!srcimg.includes(letrasErradas.length)) {
       img.classList.add("displayOff");
     } else {
       img.classList.remove("displayOff");
