@@ -11,8 +11,8 @@ const arrayPalavras = [
   { dica: "Animal", palavras: ["Raposa", "Gato", "Cachorro", "Coelho", "Pato", "Elefante"] },
   { dica: "Cor", palavras: ["Laranja", "Branco", "Vermelho", "Preto", "Azul", "Cinza", "Amarelo", "Verde"] },
 ];
-const arrayEscolhida = arrayPalavras[Math.floor(Math.random() * arrayPalavras.length)];
-const palavraEscolhida = arrayEscolhida.palavras[Math.floor(Math.random() * arrayEscolhida.palavras.length)];
+const ObjtEscolhido = arrayPalavras[Math.floor(Math.random() * arrayPalavras.length)];
+const palavraEscolhida = ObjtEscolhido.palavras[Math.floor(Math.random() * ObjtEscolhido.palavras.length)];
 const palavraArray = palavraEscolhida.toUpperCase().split("");
 let letrasErradas = [];
 let letrasCorretas = [];
