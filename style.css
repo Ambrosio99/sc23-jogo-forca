@@ -15,7 +15,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 60px;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 .container-nav img {
   place-self: center;
@@ -47,6 +48,10 @@ body {
 .ul-nav li:hover::after {
   width: 100%;
 }
+.p-dica {
+  box-sizing: border-box;
+  font-weight: 500;
+}
 
 .erros-container {
   display: flex;
@@ -54,7 +59,8 @@ body {
   justify-content: space-between;
   font-size: 1.15rem;
   font-weight: 500;
-  padding: 40px 0px 20px 40px;
+  padding: 40px 20px 20px 20px;
+  box-sizing: border-box;
 }
 .span-erros {
   color: rgb(251, 25, 25);
@@ -67,16 +73,17 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .box02 {
+  position: relative;
   display: grid;
-  gap: 30px;
+  gap: 10px;
   justify-content: center;
   justify-items: center;
   align-content: end;
-  height: 450px;
+  height: 400px;
 }
 .lista-palavra {
   display: flex;
@@ -93,6 +100,7 @@ body {
   align-items: center;
   place-self: start;
   justify-self: center;
+  padding-top: 30px;
 }
 .form-digite {
   font-size: 1.1rem;
@@ -119,7 +127,7 @@ body {
   position: absolute;
   color: white;
   right: 40px;
-  top: 120px;
+  top: 90px;
   padding: 60px 100px;
   background-color: rgba(255, 0, 0, 0.7);
   border-radius: 10px;
@@ -130,7 +138,7 @@ body {
   position: absolute;
   color: white;
   right: 40px;
-  top: 120px;
+  top: 90px;
   padding: 60px 100px;
   background-color: rgba(3, 188, 46, 0.7);
   border-radius: 10px;
@@ -141,7 +149,76 @@ body {
   position: absolute;
   color: black;
   font-weight: 500;
+  font-size: 1.05rem;
+  bottom: -30px;
+  right: 120px;
+  background-color: white;
+}
+.somenteLetras {
+  position: absolute;
+  color: black;
+  font-weight: 500;
   font-size: 0.95rem;
   bottom: -30px;
-  right: 122px;
+  right: 90px;
+  color: rgb(199, 0, 0);
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: white;
+}
+.palavraEra {
+  position: absolute;
+  color: black;
+  font-weight: 500;
+  font-size: 0.95rem;
+  bottom: -30px;
+  right: 105px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: white;
+}
+.antesEnviar {
+  position: absolute;
+  color: black;
+  font-weight: 500;
+  font-size: 0.95rem;
+  bottom: -30px;
+  right: 60px;
+  color: rgb(199, 0, 0);
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: white;
+}
+.displayOff {
+  display: none;
+}
+.diff-facil {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: rgba(3, 188, 46, 0.7);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 28px;
+  color: rgb(0, 0, 0);
+}
+.diff-medio {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: rgba(201, 163, 13, 0.659);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 28px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.diff-hard {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: rgba(255, 0, 0, 0.7);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 28px;
+  color: rgba(0, 0, 0, 0.8);
 }
