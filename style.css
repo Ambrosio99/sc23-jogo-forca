@@ -9,16 +9,20 @@ body {
   display: grid;
   margin: 0 auto;
   max-width: 1000px;
-  padding: 10px 20px;
 }
+
 .container-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 60px;
+}
+.container-nav img {
+  place-self: center;
 }
 .ul-nav {
   display: flex;
-  gap: 24px;
+  gap: 40px;
 }
 .ul-nav li {
   position: relative;
@@ -50,17 +54,20 @@ body {
   justify-content: space-between;
   font-size: 1.15rem;
   font-weight: 500;
-  padding: 20px 0px;
+  padding: 40px 0px 20px 40px;
 }
 .span-erros {
   color: rgb(251, 25, 25);
   font-weight: 700;
 }
-
+.letras-incorretas {
+  display: flex;
+}
 .jogo-forca {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 40px;
 }
 
 .box02 {
@@ -68,18 +75,24 @@ body {
   gap: 30px;
   justify-content: center;
   justify-items: center;
+  align-content: end;
+  height: 450px;
 }
 .lista-palavra {
   display: flex;
   gap: 18px;
   font-size: 2rem;
   font-weight: 700;
+  place-self: end;
+  justify-self: center;
 }
 .form-forca {
   position: relative;
   display: flex;
   gap: 10px;
   align-items: center;
+  place-self: start;
+  justify-self: center;
 }
 .form-digite {
   font-size: 1.1rem;
@@ -105,20 +118,24 @@ body {
 .perdeu {
   position: absolute;
   color: white;
-  right: 330px;
+  right: 40px;
+  top: 120px;
   padding: 60px 100px;
   background-color: rgba(255, 0, 0, 0.7);
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.505);
+  z-index: 200;
 }
 .ganhou {
   position: absolute;
   color: white;
-  right: 330px;
+  right: 40px;
+  top: 120px;
   padding: 60px 100px;
   background-color: rgba(3, 188, 46, 0.7);
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.505);
+  z-index: 200;
 }
 .jaFoi {
   position: absolute;

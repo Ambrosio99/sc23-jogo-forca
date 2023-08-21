@@ -16,7 +16,7 @@
   <main>
     <header class="bg-header">
       <div class="container-nav container-all">
-        <img src="" alt="">
+        <img src="./img/logotipo.svg" alt="">
         <nav>
           <ul class="ul-nav">
             <li id="reset-game">Reiniciar</li>
@@ -28,17 +28,22 @@
     </header>
 
     <section>
-      <div class="erros-container container-all" id="errosID">
+      <div class="container-all erros-container" id="errosID">
         <p>Número de erros: <span class="span-erros" id="span-erros"></span></p>
-        <p>Letras incorretas: <span class="letras-erros" id="letras-erros"></span></p>
+        <div class="letras-incorretas">
+          <p>Letras incorretas:</p>
+          <p class="letras-erros" id="letras-erros"></p>
+        </div>
       </div>
       <div class="jogo-forca container-all">
-        <div class="box01"></div>
+        <div class="box01">
+          <img src="./img/img-0.svg" alt="">
+        </div>
         <div class="box02">
           <ul class="lista-palavra" id="lista-palavra"></ul>
           <form id="formForca" class="form-forca">
             <label class="form-digite" for="letra">Digite uma letra:</label>
-            <input class="form-text" type="text" name="letra" id="inputLetra" maxlength="1">
+            <input class="form-text" type="text" name="letra" id="inputLetra" maxlength="1" autocomplete="off">
             <input class="form-button" type="button" form="formForca" id="inputButton" value="Enviar" onclick="letraRecebida()">
           </form>
         </div>

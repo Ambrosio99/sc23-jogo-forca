@@ -52,6 +52,7 @@ function verificarLetra(letra) {
     letrasErradas.push(letra);
     attSpanErros();
     letrasErradas.length === 6 ? elementPerdeu() : "";
+    imgForca()
   }
   verificarGanhar();
 }
@@ -81,12 +82,12 @@ function elementPerdeu() {
   h1.innerText = "Você perdeu!";
   listaPalavra.appendChild(h1);
   desativarJogo();
+  palavraEra()
 }
 
 function desativarJogo() {
   letraInput.setAttribute("disabled", true);
   buttonLetra.setAttribute("disabled", true);
-  return `O jogo acabou, aperte o reset ou atualize a pagina!`;
 }
 
 function attSpanErros() {
@@ -111,6 +112,28 @@ function letraJaFoi() {
   const local = document.getElementById("formForca");
   const p = document.createElement("p");
   p.classList.add("jaFoi");
-  p.innerText = "Essa letra ja foi!";
+  p.innerText = `A letra "${letraInput.value.toUpperCase()}" ja foi`;
+  local.appendChild(p);
+  setTimeout(() => {
+    local.removeChild(p);
+  },2000)
+}
+
+function imgForca() {
+  const boxImg = document.querySelector(".box01");
+  const imgElement = document.createElement("img");
+  const imgElementExisting = boxImg.querySelector("img");
+  if (imgElementExisting) {
+    boxImg.removeChild(imgElementExisting);
+  }
+  imgElement.src = `./img/img-${letrasErradas.length}.svg`;
+  boxImg.appendChild(imgElement);
+}
+
+function palavraEra() {
+  const local = document.getElementById("formForca");
+  const p = document.createElement("p");
+  p.classList.add("jaFoi");
+  p.innerText = `A palavra era: ${palavraEscolhida}`;
   local.appendChild(p);
 }
