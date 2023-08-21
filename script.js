@@ -31,7 +31,7 @@ function letraRecebida() {
   let letra = letraInput.value.trim().toUpperCase();
   if (!letra) {
     msgAlert(1);
-  } else if (!Number(letra)) {
+  } else if (!Number(letra) && letra.match(/^[A-Z]$/)) {
     verificarJogo(letra);
   } else {
     msgAlert(2);
