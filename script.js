@@ -76,6 +76,8 @@ function eventsDom() {
       letraRecebida();
       letraInput.value = "";
     }
+
+    buttonLetra.addEventListener("click", () => (letraInput.value = ""));
   });
 }
 eventsDom();
