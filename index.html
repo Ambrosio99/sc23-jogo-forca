@@ -4,12 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
   <title>Jogo da forca</title>
 </head>
 
 <body>
+  <main>
+    <header class="bg-header">
+      <div class="container-nav container-all">
+        <img src="./img/logotipo.svg" alt="">
+        <nav>
+          <ul class="ul-nav">
+            <li id="reset-game">Reiniciar</li>
+            <li id="dificuldade-game">Dificuldade</li>
+            <li id="sobre-game">Sobre</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <section>
+      <div class="container-all erros-container" id="errosID">
+        <p>Número de erros: <span class="span-erros" id="span-erros"></span></p>
+        <div class="letras-incorretas">
+          <p>Letras incorretas:</p>
+          <p class="letras-erros" id="letras-erros"></p>
+        </div>
+      </div>
+      <div class="jogo-forca container-all">
+        <div class="box01">
+          <img src="./img/img-0.svg" alt="">
+        </div>
+        <div class="box02">
+          <ul class="lista-palavra" id="lista-palavra"></ul>
+          <form id="formForca" class="form-forca">
+            <label class="form-digite" for="letra">Digite uma letra:</label>
+            <input class="form-text" type="text" name="letra" id="inputLetra" maxlength="1" autocomplete="off">
+            <input class="form-button" type="button" form="formForca" id="inputButton" value="Enviar" onclick="letraRecebida()">
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
   <script src="./script.js"></script>
 </body>
 
